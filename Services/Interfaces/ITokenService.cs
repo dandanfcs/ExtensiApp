@@ -4,6 +4,6 @@ namespace ExtensiApp.Services.Interfaces
 {
     public interface ITokenService
     {
-        void GenerateToken(Usuario usuario);
+        string GenerateToken(Usuario usuario);
     }
 }

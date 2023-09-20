@@ -30,17 +30,20 @@ namespace ExtensiApp.Services
                 throw new Exception("Falha ao cadastrar usuário");
         }
 
-        public async Task Login(LoginUsuarioDto dto)
+        public async Task<string> Login(LoginUsuarioDto dto)
         {
-          var resultado = await _signInManager
-                .PasswordSignInAsync(dto.UserName, dto.Password, false,false);
+            var resultado = await _signInManager
+                  .PasswordSignInAsync(dto.UserName, dto.Password, false, false);
 
             if (!resultado.Succeeded)
-            {
                 throw new Exception("Usuário não autenticado!");
-            }
 
+            var usuario = _signInManager.UserManager.
+                Users.FirstOrDefault(user => user.NormalizedUserName == dto.UserName.ToUpper());
 
+            var token = _tokenService.GenerateToken(usuario);
+
+            return token;
         }
     }
 }

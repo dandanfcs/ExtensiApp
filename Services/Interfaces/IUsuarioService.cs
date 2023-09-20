@@ -5,6 +5,6 @@ namespace ExtensiApp.Services
     public interface IUsuarioService
     {
         Task CadastrarUsuario(CreateUsuarioDto dto);
-        Task Login(LoginUsuarioDto dto);
+        Task<string> Login(LoginUsuarioDto dto);
     }
 }

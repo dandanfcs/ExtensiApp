@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ExtensiApp.Migrations
 {
     [DbContext(typeof(UsuarioDbContext))]
-    [Migration("20230913214157_inicio")]
-    partial class inicio
+    [Migration("20230920120318_Inicio")]
+    partial class Inicio
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

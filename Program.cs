@@ -1,7 +1,6 @@
 using ExtensiApp.Data;
 using ExtensiApp.Models;
 using ExtensiApp.Services;
-using ExtensiApp.Services.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -24,6 +23,8 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddControllers();
 builder.Services.AddTransient<IUsuarioService, UsuarioService>();
+builder.Services.AddSingleton<TokenService> ();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
