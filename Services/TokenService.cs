@@ -17,7 +17,7 @@ namespace ExtensiApp.Services
                 new Claim("id", usuario.Id)
             };
 
-            var chave = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("394idb78te8732"));
+            var chave = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("394idb78te8dfgdgadfgdasgfdgfdafdgfdg732"));
 
             var signingCredentials = new SigningCredentials(chave, SecurityAlgorithms.HmacSha256);
 
