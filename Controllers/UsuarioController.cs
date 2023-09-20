@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using ExtensiApp.Data.Dtos;
-using ExtensiApp.Services;
+using ExtensiApp.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ExtensiApp.Controllers

@@ -1,6 +1,6 @@
 ﻿using ExtensiApp.Data.Dtos;
 
-namespace ExtensiApp.Services
+namespace ExtensiApp.Services.Interfaces
 {
     public interface IUsuarioService
     {

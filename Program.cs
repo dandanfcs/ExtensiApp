@@ -1,5 +1,6 @@
 using ExtensiApp.Data;
 using ExtensiApp.Models;
+using ExtensiApp.Services.Interfaces;
 using ExtensiApp.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;

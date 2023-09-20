@@ -1,5 +1,4 @@
 ﻿using ExtensiApp.Models;
-using ExtensiApp.Services.Interfaces;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -7,7 +6,7 @@ using System.Text;
 
 namespace ExtensiApp.Services
 {
-    public class TokenService : ITokenService
+    public class TokenService 
     {
         public TokenService() { }
         public string GenerateToken(Usuario usuario)
